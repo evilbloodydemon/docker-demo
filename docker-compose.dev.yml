@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    container_name: 'ddemo_postgres'
+    restart: 'always'
+    image: 'postgres:12.1'
+    volumes: 
+      - ddemo-datavolume:/var/lib/postgresql/data
+    ports:
+      - '15432:5432'
+
+volumes:
+  ddemo-datavolume:
